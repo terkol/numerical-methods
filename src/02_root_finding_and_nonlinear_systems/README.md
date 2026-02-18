@@ -33,7 +33,7 @@ Bisection requires $f$ to be continuous on $[a,b]$ and a valid sign-change brack
 The specific $f(x)$ used in the file has singularities at $x=\pm 1$ due to a division by $(x^2-1)$, so brackets/iterates should avoid those points.
 
 Build/run:
-`gfortran bisection_vs_newton.f90 -O2 -o bisection_vs_newton ./bisection_vs_newton`
+`gfortran bisection_vs_newton.f90 -O2 -o bisection_vs_newton && ./bisection_vs_newton`
 
 ### `broydens_method.py`
 

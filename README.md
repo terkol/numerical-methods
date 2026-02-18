@@ -64,7 +64,7 @@ One script uses optional packages (e.g. `pyfftw` for FFTW-backed FFTs). Topic fo
 
 Run a script directly, for example:
 
-`python 02_root_finding_and_nonlinear_systems/broydens_method.py`
+`python src/02_root_finding_and_nonlinear_systems/broydens_method.py`
 
 ### Fortran
 
@@ -84,4 +84,4 @@ Several programs are designed to illustrate numerical failure modes (for example
 
 ## Data files
 
-Some scripts load data files such as `sample*.dat`, `linear_data*.txt`, or `morse_data.txt`. These files are stored alongside the scripts that use them. The corresponding folder README indicates the expected input format.
+Some scripts load data files such as `sample*.dat`, `linear_data*.txt`, or `morse_data.txt`. These files are stored in the data folder. The corresponding folder README indicates the expected input format.

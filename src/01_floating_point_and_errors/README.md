@@ -31,7 +31,7 @@ $(a + b) + c$ is not necessarily equal to $a + (b + c)$
 in finite precision, so different summation groupings can produce different rounding error.
 
 Build/run:
-`gfortran harmonic_sum_naive.f90 -O2 -o harmonic_sum_naive ./harmonic_sum_naive`
+`gfortran harmonic_sum_naive.f90 -O2 -o harmonic_sum_naive && ./harmonic_sum_naive`
 
 ### `harmonic_sum_kahan.f90`
 
@@ -48,7 +48,7 @@ $s = t$
 This typically reduces error relative to naive summation, especially in single precision.
 
 Build/run:
-`gfortran harmonic_sum_kahan.f90 -O2 -o harmonic_sum_kahan ./harmonic_sum_kahan`
+`gfortran harmonic_sum_kahan.f90 -O2 -o harmonic_sum_kahan && ./harmonic_sum_kahan`
 
 ### `richardson_vs_analytical.py`
 
@@ -96,4 +96,4 @@ so $f_2(x) = 1 + x^2/6 + O(x^4)$
 Demonstrates why series approximations are preferred for small $|x|$ to avoid catastrophic cancellation.
 
 Build/run:
-`gfortran taylor_stable_evolution.f90 -O2 -o taylor_stable ./taylor_stable`
+`gfortran taylor_stable_evolution.f90 -O2 -o taylor_stable && ./taylor_stable`
