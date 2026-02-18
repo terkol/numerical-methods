@@ -55,13 +55,13 @@ Eigenvalue-based search for the most unstable mode in a discretized (ballooning-
 Two comparisons are performed:
 
 Uncoupled $2×2$ dispersion relation.
-For each discrete $k_y$ mode, form a $2×2$ complex matrix and compute its eigenvalues $\omega$. The “growth rate” is typically taken as $\operatorname{Im}(\omega)$, and the script scans over modes to find the maximum growth rate:
-$\max_{k_y} \operatorname{Im}(\omega(k_y))$.
+For each discrete $k_y$ mode, form a $2×2$ complex matrix and compute its eigenvalues $\omega$. The “growth rate” is typically taken as $\Im(\omega)$, and the script scans over modes to find the maximum growth rate:
+$\max_{k_y} \Im(\omega(k_y))$.
 
 Coupled $2M×2M$ sparse operator.
 A block tridiagonal sparse matrix $L$ is assembled and the eigenmode with largest imaginary part is computed using ARPACK via SciPy:
 $\omega, \psi ;:; L\psi = \omega\psi$,
-selecting the eigenvalue with maximal $\operatorname{Im}(\omega)$.
+selecting the eigenvalue with maximal $\Im(\omega)$.
 
 The script also visualizes:
 
