@@ -40,7 +40,9 @@ $y'' + y = 0$,
 
 with boundary conditions
 
-$y(a) = y_0$, $y(b) = y_1$.
+$y(a) = y_0$, 
+
+$y(b) = y_1$.
 
 The method converts the BVP into a root-finding problem for the unknown initial slope $k = y'(a)$:
 
