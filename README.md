@@ -20,7 +20,7 @@ Scalar root finding (bisection, Newton), nonlinear systems (Broyden), and relate
 
 ### `04_linear_algebra_and_eigenproblems`
 
-Dense linear solves (LU via LAPACK), least-squares fitting, eigenvalue algorithms, and polynomial roots via a companion-matrix eigenvalue formulation.
+Dense linear solves (LAPACK), least-squares fitting, eigenvalue algorithms, and polynomial roots with a companion-matrix eigenvalue formulation.
 
 ### `05_interpolation_and_splines`
 
@@ -50,7 +50,7 @@ Parameter estimation from data: MCMC likelihood fitting and nonlinear least-squa
 
 A finite-difference Schrödinger eigenvalue problem on a 1D interval (particle in a box and a simple perturbation).
 
-Each topic folder contains a `README.md` describing the programs in that folder and how to run them.
+### Each topic folder contains a `README.md` describing the programs in that folder and how to run them.
 
 ## Running the code
 
@@ -64,7 +64,7 @@ One script uses optional packages (e.g. `pyfftw` for FFTW-backed FFTs). Topic fo
 
 Run a script directly, for example:
 
-`python src/02_root_finding_and_nonlinear_systems/broydens_method.py`
+`python 02_root_finding_and_nonlinear_systems/broydens_method.py`
 
 ### Fortran
 
@@ -84,4 +84,4 @@ Several programs are designed to illustrate numerical failure modes (for example
 
 ## Data files
 
-Some scripts load data files such as `sample*.dat`, `linear_data*.txt`, or `morse_data.txt`. These files are stored in the data folder. The corresponding folder README indicates the expected input format.
+Some scripts load data files such as `sample*.dat`, `linear_data*.txt`, or `morse_data.txt`. These files are stored in the `data/raw/` folder. The corresponding folder README indicates the expected input format.

@@ -9,7 +9,7 @@ Loads a sampled time series from sample1.dat and analyzes its frequency content 
 
 Given samples $s_n = s(t_n)$ with sampling interval $\Delta t$, the discrete Fourier transform resolves frequencies
 
-$f_k = \dfrac{k}{N\Delta t}$ (via numpy.fft.fftfreq),
+$f_k = \dfrac{k}{N\Delta t}$ (via `numpy.fft.fftfreq`),
 
 and the dominant (fundamental) frequency can be estimated by locating the largest peak in the magnitude spectrum $|\hat s(f)|$ after removing the mean (to suppress the DC component).
 
@@ -21,7 +21,7 @@ Run: `python fourier_transform.py`
 
 Data:
 
-expects `sample1.dat` in the data folder (two columns: time, signal).
+expects `sample1.dat` in the `data/raw/` folder (two columns: time, signal).
 
 ### `inverse_fourier_transform.py`
 

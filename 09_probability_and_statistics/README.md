@@ -14,7 +14,7 @@ $\bar{x}^{*(b)} = \dfrac{1}{n}\sum_{i=1}^n x_i^{*(b)}$.
 
 A percentile confidence interval for the mean is then
 
-$[\mathrm{q}{0.025}(\bar{x}^*),; \mathrm{q}{0.975}(\bar{x}^*)]$,
+$[\mathrm{q}_{0.025}(\bar{x}^*), \mathrm{q}_{0.975}(\bar{x}^*)]$,
 
 where $\mathrm{q}_p$ denotes the $p$-th quantile of the bootstrap distribution.
 

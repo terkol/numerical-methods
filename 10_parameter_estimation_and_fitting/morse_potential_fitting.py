@@ -52,7 +52,7 @@ def gradient_descent(r, x, gamma, y, max_i=22000):  # Move into the direction of
     return x, objs                  # Return final x and list of objective function values
     
 if __name__ == "__main__":
-    data = np.loadtxt(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))+'\\data\\morse_data.txt')
+    data = np.loadtxt(os.path.dirname(os.path.dirname(__file__))+'\\data\\raw\\morse_data.txt')
     r_data = data[:,0]
     V_data = data[:,1]
     plt.scatter(r_data, V_data)

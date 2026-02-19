@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 def L(data, x1, x2):
     return np.prod([(1/(np.sqrt(2*np.pi)*i[2])*np.exp(-((i[1]-(x1*i[0]+x2))**2)/(2*i[2]*i[2]))) for i in data]) # Likelihood function for given x1 and x2
@@ -90,14 +91,14 @@ def metropolis(x0, data, steps=100000, burnin=10000, report=True):
     return chain[burnin:]
 
 if __name__ == "__main__":
-    data = np.loadtxt(f"{__file__[:-21]}linear_data_errors.txt") # Import data
-    x0 = (2,5) # Initial guess
+    data = np.loadtxt(os.path.dirname(os.path.dirname(__file__))+"\\data\\raw\\linear_data_errors.txt")
+    print(data)
+    x0 = (2,5)
 
     mc = metropolis(x0, data, report=True)
     x1 = mc[:,0]
     x2 = mc[:,1]
 
-    # Plot histogram of each parameter in their own subplot
     plt.figure(figsize=(12,6))
     plt.subplot(1,2,1)
     plt.hist(x1, 100, (1.5,2.5), density=True)
@@ -109,7 +110,6 @@ if __name__ == "__main__":
     plt.grid()
     plt.show()
 
-    # Plot for initial guesses:
     plt.errorbar(data[:,0],data[:,1], yerr=data[:,2], fmt="o", capsize=5)
     plt.xlabel("t")
     plt.ylabel("y")

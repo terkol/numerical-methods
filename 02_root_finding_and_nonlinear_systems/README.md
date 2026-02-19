@@ -22,13 +22,11 @@ Newton’s method updates
 
 $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$,
 
-and converges quickly when started sufficiently close to a simple root (typically quadratic convergence). In this implementation, $f'(x)$ is approximated by a central difference:
+and can converge very quickly when started sufficiently close to a simple root. In this implementation, $f'(x)$ is approximated by a central difference:
 
 $f'(x) \approx \dfrac{f(x+h)-f(x-h)}{2h}$.
 
 Notes:
-
-Bisection requires $f$ to be continuous on $[a,b]$ and a valid sign-change bracket.
 
 The specific $f(x)$ used in the file has singularities at $x=\pm 1$ due to a division by $(x^2-1)$, so brackets/iterates should avoid those points.
 
@@ -61,7 +59,7 @@ Notes:
 
 Convergence depends strongly on the initial guess.
 
-The rank-1 update can become unstable if the update denominator becomes very small (too lazy to add safeguards).
+The rank-1 update can become unstable if the update denominator becomes very small.
 
 Dependencies: `numpy`
 
@@ -79,7 +77,7 @@ one can form the companion matrix $C \in \mathbb{R}^{n\times n}$ such that its e
 
 ${\lambda_i(C)} = {x : P(x)=0}$.
 
-This script compares the eigenvalue-based roots to numpy.roots (which expects coefficients in descending order).
+This script compares the eigenvalue-based roots to `numpy.roots` (which expects coefficients in descending order).
 
 Dependencies: `numpy`, `scipy`.
 

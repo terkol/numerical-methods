@@ -41,7 +41,7 @@ $y(t) \approx \alpha + \beta t + \gamma^2 \cos(t)$.
 
 The script constructs the design matrix $A$ with rows
 
-$[1,; t,; \cos(t)]$
+$[1, t, \cos(t)]$
 
 and estimates parameters by solving the normal equations
 
@@ -65,7 +65,7 @@ Dependencies: `numpy`
 
 Run: `python noisy_matrix.py`
 
-jacobi_method_error_propagation.py
+### `jacobi_method_error_propagation.py`
 
 Jacobi eigenvalue algorithm for symmetric matrices. Applies plane rotations to reduce off-diagonal elements and iteratively diagonalize the matrix. After a fixed number of sweeps, the diagonal entries approximate the eigenvalues.
 

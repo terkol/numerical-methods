@@ -12,9 +12,9 @@ $x = k \ln(2) + r$, with $k$ an integer,
 
 so that $r$ is “small”, then compute
 
-$exp(x) = 2^k exp(r)$.
+$\exp(x) = 2^k \exp(r)$.
 
-This reduces numerical risk (overflow/underflow) and can improve accuracy when $|x|$ is large.
+This reduces numerical risk (overflow/underflow) and can improve accuracy when $x$ is large.
 
 Run: `python exp.py`
 
@@ -68,9 +68,9 @@ $f(x) = \sin( \exp(-x^2) )$
 
 with derivative:
 
-$f'(x) = \cos( \exp(-x^2) ) * ( -2x \exp(-x^2) )$
+$f'(x) = \cos( \exp(-x^2) ) \cdot ( -2x \exp(-x^2) )$
 
-At x = 1:
+At $x = 1$:
 
 $f'(1) = -2 \exp(-1) \cos( \exp(-1) )$
 
@@ -87,13 +87,15 @@ $f_2(x) = (\exp(x) - \exp(-x)) / (2x) = \sinh(x) / x$
 
 Series expansions around $x = 0$:
 
-$\cos(x) = 1 - x^2/2 + x^4/24 + O(x^6)$
+$\cos(x) = 1 - x^2/2 + x^4/24 + O(x^6)$,
+
 so $f_2(x) = -1/2 + x^2/24 + O(x^4)$
 
-$\sinh(x) = x + x^3/6 + O(x^5)$
+$\sinh(x) = x + x^3/6 + O(x^5)$,
+
 so $f_2(x) = 1 + x^2/6 + O(x^4)$
 
-Demonstrates why series approximations are preferred for small $|x|$ to avoid catastrophic cancellation.
+Demonstrates why series approximations are preferred for small $x$ to avoid catastrophic cancellation.
 
 Build/run:
 `gfortran taylor_stable_evolution.f90 -O2 -o taylor_stable && ./taylor_stable`

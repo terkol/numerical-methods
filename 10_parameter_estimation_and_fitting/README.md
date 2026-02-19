@@ -30,7 +30,7 @@ Dependencies: `numpy`, `matplotlib`.
 Run: `python likelihood_fitting.py`
 
 Data:
-- expects `linear_data_errors.txt` in the same folder (columns: $t$, $y$, $\sigma$).
+- expects `linear_data_errors.txt` in the `data/raw/` folder (columns: $t$, $y$, $\sigma$).
 
 ### `morse_potential_fitting.py`
 
@@ -53,4 +53,4 @@ Dependencies: `numpy`, `matplotlib`.
 Run: `python morse_potential_fitting.py`
 
 Data:
-- expects `morse_data.txt` in the data folder (columns: $r$, $V$).
+- expects `morse_data.txt` in the `data/raw/` folder (columns: $r$, $V$).

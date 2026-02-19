@@ -60,7 +60,7 @@ $\max_{k_y} \Im(\omega(k_y))$.
 
 Coupled $2M×2M$ sparse operator.
 A block tridiagonal sparse matrix $L$ is assembled and the eigenmode with largest imaginary part is computed using ARPACK via SciPy:
-$\omega, \psi ;:; L\psi = \omega\psi$,
+$\omega, \psi : L\psi = \omega\psi$,
 selecting the eigenvalue with maximal $\Im(\omega)$.
 
 The script also visualizes:

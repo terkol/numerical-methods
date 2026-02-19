@@ -42,7 +42,7 @@ def plot_spectrogram(): # Plots spectrogram of signal
     plt.show()
 
 if __name__ == "__main__":
-    data = np.loadtxt(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))+'\\data\\sample1.dat', skiprows=1) # Load data
+    data = np.loadtxt(os.path.dirname(os.path.dirname(__file__))+'\\data\\raw\\sample1.dat', skiprows=1) # Load data
     time = data[:,0]    # Extract first column
     signal = data[:,1]  # Extract second column
     dt = time[1]-time[0]    # Find time interval
